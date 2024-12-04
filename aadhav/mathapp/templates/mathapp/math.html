@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Power Of A Lamp Filament</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+        .edge {
+            width: 1440px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 250px;
+            padding-left: 300px;
+        }
+        .box {
+            display: block;
+            border: thick solid  rgb(8, 6, 17);
+            width: 500px;
+            min-height: 300px;
+            font-size: 20px;
+            border-radius: 18px;
+            background-color: rgb(223, 220, 149);
+        }
+        .formelt {
+            color: rgb(1, 18, 17);
+            text-align: center;
+            margin-top: 7px;
+            margin-bottom: 6px;
+        }
+        h1 {
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="edge">
+        <div class="box">
+            <h1>Power Of A Lamp Filament</h1>
+            <h3>AADHAV S(24005747)</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="formelt">
+                    Intensity: <input type="text" name="intensity" value="{{ r }}"></input> (in amps)<br/>
+                </div>
+                <div class="formelt">
+                    Resistance: <input type="text" name="resistance" value="{{ h }}"></input> (in ohms)<br/>
+                </div>
+                <div class="formelt">
+                    <input type="submit" value="Calculate"></input><br/>
+                </div>
+                <div class="formelt">
+                    Power: <input type="text" name="power" value="{{ power }}" readonly></input> watts<br/>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
